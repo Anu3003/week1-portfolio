@@ -1,0 +1,204 @@
+@import url('variables.css');
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+header {
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium) var(--spacing-large);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+.nav-links li a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hamburger menu for mobile */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+#hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../images/profile.jpg') center/cover no-repeat;
+    color: rgb(5, 0, 0);
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-small);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-medium);
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+section {
+    padding: var(--spacing-large);
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-medium);
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+    justify-content: center;
+}
+
+.skills-list li {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 5px;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-medium);
+}
+
+.project-card {
+    background: white;
+    padding: var(--spacing-medium);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: var(--spacing-small);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-color);
+}
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-medium);
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
